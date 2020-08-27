@@ -1,6 +1,5 @@
 <template>
   <div>
-    // Search input to filters restaurants
     <form class="uk-search uk-search-large uk-align-center uk-margin">
       <span uk-search-icon></span>
       <input
@@ -10,8 +9,6 @@
         placeholder="Search..."
       />
     </form>
-
-    // Restaurant cards
     <div
       v-for="restaurant in filteredList"
       :key="restaurant"
@@ -30,7 +27,6 @@
         <div class="uk-card-body">
           <h3 class="uk-card-title">{{ restaurant.name }}</h3>
           <p>{{ restaurant.description }}</p>
-          // Link to the restaurant using router-link
           <router-link
             :to="{ name: 'restaurants-id', params: { id: restaurant.id } }"
             tag="a"
@@ -40,8 +36,6 @@
         </div>
       </div>
     </div>
-
-    // If no restaurants have been found
     <div
       v-if="filteredList.length == 0"
       class="uk-container uk-container-center uk-text-center"
