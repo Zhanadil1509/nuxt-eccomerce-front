@@ -52,7 +52,7 @@
 
 <script>
 // Import the restaurants query
-import restaurantsQuery from '~/apollo/queries/restaurant/restaurants'
+import restaurantsQuery from '../../apollo/queries/restaurant/restaurants.graphql'
 
 export default {
   data() {
